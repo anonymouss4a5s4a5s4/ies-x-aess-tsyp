@@ -69,8 +69,8 @@ The predictive core of the Guardian system is a highly optimized LSTM neural net
 
 1.  **Hardware Setup:** Assemble the circuit according to the provided schematic.
 2.  **Software Setup:**
-    *   Upload the `Guardian_Controller.ino` sketch to your Arduino Uno. You will need to install the `Arduino_TensorFlowLite` library.
-    *   On your Raspberry Pi, ensure you have Python and the `RPi.GPIO` library installed.
+    *   Upload the `Guardian_Controller.ino` sketch to an Arduino Uno. install the `Arduino_TensorFlowLite` library.
+    *   On the Raspberry Pi, ensure  Python and the `RPi.GPIO` library installed.
 3.  **Running a Test (OBC Freeze):**
     *   Power on the system. Open the Arduino's Serial Monitor to view the Guardian's status telemetry.
     *   Run `python obc_heartbeat_simulator.py` on the Raspberry Pi. You should see "Heartbeat detected" messages in the Arduino serial monitor.
