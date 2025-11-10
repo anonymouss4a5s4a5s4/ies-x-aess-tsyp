@@ -13,7 +13,7 @@ This system operates independently, requires no ground support, and is designed 
 
 The Guardian's architecture is built on a principle of robust simplicity. A dedicated **Guardian Controller** (the brain) monitors the host CubeSat's **OBC** and **EPS** (the patients) using a dedicated **Sensing Array**. If a fault is detected or predicted, it uses its **Intervention Hardware** to take immediate corrective action.
 
-![Guardian Schematic](remade_guardian_schematic.svg)
+![Guardian Schematic](hardware/Schematics)
 
 ## 3. How It Works
 
