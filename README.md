@@ -59,7 +59,7 @@ The predictive core of the Guardian system is a highly optimized LSTM neural net
 *   **Training:** The model was trained on a high-fidelity synthetic dataset that mimics both normal orbital conditions and the known physical signatures of battery thermal runaway.
 *   **Performance:** The model achieved **98.13% accuracy** on the test set. The confusion matrix below shows its exceptional performance: it produced **zero false positives**, meaning it never incorrectly flagged a normal situation as an anomaly. It successfully detected 87% of all true anomalies.
 
-![Confusion Matrix](https://user-images.githubusercontent.com/12345/67890/confusion_matrix.png) <!-- Replace with the actual URL to the confusion matrix image in your repo -->
+![Confusion Matrix](images/confusion_matrix.png) 
 
 *   **Deployment:** The model was converted using **TensorFlow Lite** and underwent **full integer quantization**. The final model is only **~2.5 KB**, making it small enough to run efficiently on the Arduino's resource-constrained microcontroller.
 
