@@ -5,7 +5,7 @@
 
 ## 1. Project Goal
 
-The Guardian is a fully autonomous, electronic subsystem designed to increase the mission success rate of CubeSats. It addresses the two most common causes of catastrophic mission failure—**On-Board Computer (OBC) freezes** and **Electrical Power System (EPS) failures**—by using a combination of hardware-level monitoring and a predictive AI model to detect and intervene in failure scenarios before they become unrecoverable.
+The Guardian is a fully autonomous, electronic subsystem designed to increase the mission success rate of CubeSats. It addresses the two most common causes of catastrophic mission failure—**On-Board Computer (OBC) freezes** and **Electrical Power System (EPS) failures**by using a combination of hardware-level monitoring and a predictive AI model to detect and intervene in failure scenarios before they become unrecoverable.
 
 This system operates independently, requires no ground support, and is designed to be a "guardian angel" that ensures the CubeSat remains operational.
 
@@ -22,7 +22,7 @@ The Guardian protects against two primary failure scenarios:
 
 *   **Problem:** The main computer freezes due to a software bug or a radiation-induced Single Event Upset (SEU), rendering the satellite unresponsive.
 *   **Guardian's Solution:**
-    1.  **Monitor:** The Guardian listens for a "heartbeat" signal—a simple blinking light (GPIO pin toggle)—from the OBC.
+    1.  **Monitor:** The Guardian listens for a "heartbeat" signal a simple blinking light (GPIO pin toggle) from the OBC.
     2.  **Detect:** If the heartbeat signal stops changing for more than 10 seconds, the Guardian declares the OBC frozen.
     3.  **Intervene:** It immediately sends a signal to a MOSFET, which pulls the OBC's hardware `RUN` pin to ground, forcing a hard reboot and clearing the frozen state.
 
@@ -31,7 +31,7 @@ The Guardian protects against two primary failure scenarios:
 *   **Problem:** The battery begins to dangerously overheat, risking a fire that would destroy the entire satellite.
 *   **Guardian's Solution:**
     1.  **Monitor:** The Guardian continuously reads real-time temperature and voltage data from the battery.
-    2.  **Predict (AI):** A lightweight LSTM neural network, running on the Guardian controller, analyzes the time-series data. It is trained to recognize the subtle "pre-failure signature" of a thermal runaway event (e.g., a rapid temperature rise correlated with an anomalous voltage drop).
+    2.  **Predict (AI):** A lightweight LSTM neural network, running on the Guardian controller, analyzes the time-series data. It is trained to recognize the subtle "pre-failure signature" of a thermal runaway event (example: a rapid temperature rise correlated with an anomalous voltage drop).
     3.  **Intervene:** If the AI model predicts a failure, the Guardian activates a relay to physically disconnect the battery from the rest of the spacecraft, preventing a catastrophic thermal event.
 
 ## 4. Components
